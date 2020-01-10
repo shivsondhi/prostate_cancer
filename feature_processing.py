@@ -61,7 +61,7 @@ def do_t_stage(t_data, filenames, mode):
 		t_columns = t_columns[selector.get_support()]
 		fs_data[i] = pd.DataFrame(selector.transform(fs_data[i]), columns=t_columns, index=t_rows)
 		fs_data[i]['TStage'] = d['TStage']
-		if mode in ('partial', 'show'):
+		if mode == 'show':
 			print("Selecting data from RF model -\n", fs_data[i].head())
 		print("Shape after feature selection: {}".format(fs_data[i].shape), end="\n\n")
 	# RESAMPLING the data - SMOTEENN

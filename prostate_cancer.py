@@ -97,11 +97,11 @@ def main():
 			print('Value Counts -\n', t_data[i]['TStage'].value_counts())
 			print('Value Counts -\n', t_data[i]['Recurrence'].value_counts())
 	print("\t\tT-STAGE")
-	t_results = t_stage_results = do_t_stage(t_data, tstage_mapping, filenames, mode)
+	t_results = t_stage_results = do_t_stage(t_data, filenames, mode)
 	print("\n\t\tGLEASON SCORE")
 	g_results = gleason_results = do_gleason(t_data, filenames, mode)
 	print("\n\t\tTUMOR RECURRENCE")
-	r_results = t_recur_results = do_t_recur(t_data, recurrence_mapping, filenames, mode)
+	r_results = t_recur_results = do_t_recur(t_data, filenames, mode)
 
 	# Plot the final results
 	# DNA is the methylation hm450 file
